@@ -9,3 +9,6 @@ export default module.exports = {
   },
   plugins: [require("daisyui")],
 };
+
+
+
