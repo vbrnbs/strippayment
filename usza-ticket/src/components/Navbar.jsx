@@ -1,11 +1,13 @@
-import React from 'react'
+import Modal from './Modal'
 
 const Navbar = () => {
+
   return (
     <div className='flex justify-end p-2'>
-      <div className='border rounded-lg bg-blue-500 p-4 text-white cursor-pointer'>
-        Cart (0)
+      <div >
+        
       </div>
+        <Modal items={0} />
     </div>
   )
 }
