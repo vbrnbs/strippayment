@@ -1,4 +1,4 @@
-import ToCart from "./Tocart";
+import ToCart from "./ToCart";
 import { CartContext } from "../CartContext";
 import { useContext } from "react";
 
