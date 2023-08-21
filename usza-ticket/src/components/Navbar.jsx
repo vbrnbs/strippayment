@@ -1,4 +1,4 @@
-import Modal from './Modal'
+import Modal from './Cart'
 import { useContext } from 'react'
 import { CartContext } from '../CartContext'
 
