@@ -8,7 +8,7 @@ const Show = ({ id, image, title, location, desc, time, price }) => {
 
   return (
     <>
-      <a href="#show-modal">
+      <a href={`#show-modal-${id}`}>
         <div
           style={{
             backgroundImage: `url(${image})`,
@@ -25,8 +25,7 @@ const Show = ({ id, image, title, location, desc, time, price }) => {
             {/* <ToCart id={id} productQuantity={productQuantity} /> */}
           </div>
         </div>
-      </a>
-      <ShowModal
+        <ShowModal
         id={id}
         image={image}
         title={title}
@@ -35,6 +34,8 @@ const Show = ({ id, image, title, location, desc, time, price }) => {
         price={price}
         location={location}
       />
+      </a>
+      
     </>
   );
 };

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../CartContext";
 import CartProduct from "./CartProduct";
 
-const Modal = ({ items }) => {
+const Cart = ({ items }) => {
   const cart = useContext(CartContext);
 
   const checkout = async () => {
@@ -28,7 +28,7 @@ const Modal = ({ items }) => {
       <a href="#my-modal" className="btn btn-primary m-10">
         Kosár ( {items} )
       </a>
-      <div id="my-modal" class="modal">
+      <div id="my-modal" className="modal">
         <div className="modal-box">
           <div className="">
             <h3 className="font-bold text-lg">Kosarad Tartalma:</h3>
@@ -46,10 +46,10 @@ const Modal = ({ items }) => {
               </button>
             </div>
           </div>
-          <div class="modal-action">
+          <div className="modal-action">
             <a
               href="#"
-              class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
             >
               x
             </a>
@@ -60,4 +60,4 @@ const Modal = ({ items }) => {
   );
 };
 
-export default Modal;
+export default Cart;

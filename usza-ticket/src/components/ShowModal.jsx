@@ -7,11 +7,11 @@ const ShowModal = ({ id, image, title, location, desc, time, price }) => {
 
     const cart = useContext(CartContext);
 
-
   return (
     <div>
-      <div id="show-modal" class="modal">
-        <div class="modal-box">
+     <div id={`show-modal-${id}`} className="modal">
+      {/* <div id="show-modal" className="modal"> */}
+        <div className="modal-box">
           {id}
           <img src={image} alt="title" />
           {title}
@@ -20,10 +20,10 @@ const ShowModal = ({ id, image, title, location, desc, time, price }) => {
           {price}
           {location}
           <ToCart id={id} />
-          <div class="modal-action">
+          <div className="modal-action">
             <a
               href="#"
-              class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
             >
               x
             </a>
