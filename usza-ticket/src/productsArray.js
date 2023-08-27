@@ -5,6 +5,7 @@
 const productsArray = [
     {
         id: "price_1NeuTRF8wzumqS6HVslh5LB5",
+        kedv: "price_1Ni713F8wzumqS6Htf64e2CF",
         title: "Bilet normalny",
         price: 20,
         time: "18 Augusztus",

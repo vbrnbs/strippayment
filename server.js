@@ -40,6 +40,15 @@ app.post("/checkout", async (req,res) => {
         )
     });
 
+    const listPrices = async () => {
+        const prices = await stripe.prices.list({ limit: 100 }); // You might need to paginate if you have more than 100 prices
+        return prices.data;
+      };
+      
+      listPrices().then(prices => {
+        console.log(prices);
+      });
+
     const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: 'payment',

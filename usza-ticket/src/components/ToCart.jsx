@@ -1,10 +1,13 @@
 import { CartContext } from "../CartContext";
 import { useContext } from "react";
+import { productsArray } from "../productsArray";
 
 const ToCart = (props) => {
   const cart = useContext(CartContext);
-  const productQuantity = cart.getProductQuantity(props.id)
+  const productQuantity = cart.getProductQuantity(props.id);
+  const discountPrice = productsArray.map(kedv => kedv.kedv)[0]
 
+  console.log(discountPrice)
 
   return (
     <div>

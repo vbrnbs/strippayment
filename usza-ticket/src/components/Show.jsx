@@ -25,17 +25,18 @@ const Show = ({ id, image, title, location, desc, time, price }) => {
             {/* <ToCart id={id} productQuantity={productQuantity} /> */}
           </div>
         </div>
+        <div>
         <ShowModal
-        id={id}
-        image={image}
-        title={title}
-        desc={desc}
-        time={time}
-        price={price}
-        location={location}
-      />
+          id={id}
+          image={image}
+          title={title}
+          desc={desc}
+          time={time}
+          price={price}
+          location={location}
+        />
+        </div>
       </a>
-      
     </>
   );
 };

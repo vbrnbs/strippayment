@@ -16,6 +16,12 @@ export function CartProvider({children}) {
     
     // [ { id: 1 , quantity: 3 }, { id: 2, quantity: 1 } ]
 
+    function getDiscountPrice(id) {
+        const discountPrice = cartProducts.kedv;
+        console.log(discountPrice);
+        return discountPrice;
+    }
+
     function getProductQuantity(id) {
         const quantity = cartProducts.find(product => product.id === id)?.quantity;
         
