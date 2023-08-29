@@ -8,12 +8,14 @@ const CartProduct = (props) => {
   const id = props.id;
   const quantity = props.quantity;
   const productData = getProductData(id);
+  const ppp = id === productData.full.id ? productData.full : productData.kedv
+  // console.log(productData.title)
 
   return (
-    <div>
+    <div className="my-6">
       <h3>{productData.title}</h3>
-      <p>{quantity}</p>
-      <p>{quantity * productData.price} Ft</p>
+      <p>{quantity} db</p>
+      <p>{quantity * ppp.price} Ft</p>
       <ToCart id={id} productQuantity={quantity}/>
     </div>
   );

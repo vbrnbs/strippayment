@@ -20,7 +20,8 @@ const Store = () => {
               title={product.title}
               desc={product.description}
               time={product.time}
-              price={product.price}
+              full={product.full}
+              kedv={product.kedv}
               location={product.location}
             />
           ))}

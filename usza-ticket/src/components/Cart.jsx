@@ -4,6 +4,7 @@ import CartProduct from "./CartProduct";
 
 const Cart = ({ items }) => {
   const cart = useContext(CartContext);
+  console.log(cart.items)
 
   const checkout = async () => {
     await fetch("http://localhost:4000/checkout", {

@@ -2,7 +2,7 @@ import { CartContext } from "../CartContext";
 import { useContext } from "react";
 import ShowModal from "./ShowModal";
 
-const Show = ({ id, image, title, location, desc, time, price }) => {
+const Show = ({ id, image, title, location, desc, time, full, kedv }) => {
   const cart = useContext(CartContext);
   const productQuantity = cart.getProductQuantity(id);
 
@@ -32,7 +32,8 @@ const Show = ({ id, image, title, location, desc, time, price }) => {
           title={title}
           desc={desc}
           time={time}
-          price={price}
+          full={full}
+          kedv={kedv}
           location={location}
         />
         </div>

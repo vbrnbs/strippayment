@@ -16,12 +16,6 @@ export function CartProvider({children}) {
     
     // [ { id: 1 , quantity: 3 }, { id: 2, quantity: 1 } ]
 
-    function getDiscountPrice(id) {
-        const discountPrice = cartProducts.kedv;
-        console.log(discountPrice);
-        return discountPrice;
-    }
-
     function getProductQuantity(id) {
         const quantity = cartProducts.find(product => product.id === id)?.quantity;
         
@@ -76,9 +70,6 @@ export function CartProvider({children}) {
     }
 
     function deleteFromCart(id) {
-        // [] if an object meets a condition, add the object to array
-        // [product1, product2, product3]
-        // [product1, product3]
         setCartProducts(
             cartProducts =>
             cartProducts.filter(currentProduct => {
@@ -91,7 +82,10 @@ export function CartProvider({children}) {
         let totalCost = 0;
         cartProducts.map((cartItem) => {
             const productData = getProductData(cartItem.id);
-            totalCost += (productData.price * cartItem.quantity);
+            productData.full.id === cartItem.id ?
+            totalCost += (productData.full.price * cartItem.quantity) 
+            :
+            totalCost += (productData.kedv.price * cartItem.quantity);
         });
         return totalCost;
     }

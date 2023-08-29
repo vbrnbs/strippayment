@@ -1,4 +1,4 @@
-import Modal from './Cart'
+import Cart from './Cart'
 import { useContext } from 'react'
 import { CartContext } from '../CartContext'
 
@@ -15,7 +15,7 @@ const Navbar = () => {
       <div >
         
       </div>
-        <Modal items={productCount} />
+        <Cart items={productCount} />
     </div>
   )
 }
